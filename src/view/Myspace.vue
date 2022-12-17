@@ -2,15 +2,15 @@
   <div class="myspace">
     <el-container class="myspace">
       <el-aside >
-        <el-radio-group v-model="isCollapse" >
-          <el-radio-button :label="!isCollapse">
-            <el-icon ><Grid /></el-icon>
-          </el-radio-button>
-        </el-radio-group>
+       
         <el-menu
           default-active="2"
           class="el-menu-vertical-demo"
           :collapse="isCollapse"
+          active-text-color="#ffd04b"
+          background-color="#545c64"
+          text-color="#fff"
+          style="height: 100%;"
           @open="handleOpen"
           @close="handleClose"
         >
@@ -67,7 +67,7 @@ import {
   Setting,
 } from '@element-plus/icons-vue'
 
-const isCollapse = ref(true)
+const isCollapse = ref(false)
 
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)

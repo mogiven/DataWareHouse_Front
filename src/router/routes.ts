@@ -1,41 +1,10 @@
 const routes = [
     {
-        name: 'Login',
-        path: '/login',
-        meta: {keepAlive: false},
-        component: () => import('@/view/LoginRegister.vue')
-    },
-
-    {
-        name: 'Home',
-        path: '/home',
-        meta: {keepAlive: true},
-        component: () => import('@/view/Home.vue')
-    },
-    {
-      name: 'ManagePosted',
-      path: '/manageposted',
-      meta: {keepAlive: true},
-      component: () => import('@/view/ManagePosted.vue')
-    },
-        {
-      name: 'Position',
-      path: '/Position',
-      meta: {keepAlive: true},
-      component: () => import('@/view/PositionView.vue')
-    },
-    {
         name: 'Myspace',
-        path: '/myspace',
+        path: '/',
         meta: {keepAlive: true},
         component: () => import('@/view/Myspace.vue'),
         children:[
-        // {
-        //   path: '/myspace/userInfo',
-        //   name: 'userInfo',
-        //   component: () => import('@/components/myspace/UserInfo.vue')
-        // },
-
         {
             path: '/myspace/historyPostList',
             name: 'history',
@@ -47,20 +16,11 @@ const routes = [
             name: 'myProfile',
             component: () => import('@/components/myspace/MyProfile.vue')
           },
-          // {
-          //   path: '/myspace/sysNotice',
-          //   name: 'sysNotice',
-          //   component: () => import('@/components/myspace/SysNotice.vue')
-          // },
+
 
         ]
 
     },
-    // {
-    //     name: 'FaultPage',
-    //     path: '/:catchAll(.*)',
-    //     component: () => import('@/view/404.vue')
-    // },
 
 ];
 

@@ -8,7 +8,7 @@
 
     <!-- <img src="@/assets/logo.png" alt="logo" class="logo"> -->
     <div class="logo">
-      LOGO OF UUJOB
+      数据演示
     </div>
 
 
@@ -78,6 +78,7 @@ export default {
 
 .logo{
   margin-top: 20px;
+  margin-left: 20px;
   font-size: large;
   font-style: italic;
 }
