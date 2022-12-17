@@ -1,12 +1,4 @@
-module.exports = {
-    publicPath: './',
-    devServer: {
-        host: 'localhost'
-    },
-    configureWebpack: {
-        devtool: "inline-source-map"
-    },
-    css: {
-        extract: false
-    }
-};
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  transpileDependencies: true
+})

@@ -1,26 +1,24 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-import { staticRoutes } from './staticRoutes';
-import defaultRoutes from './defaultRoutes';
-
-const routes: any = staticRoutes.concat(defaultRoutes);
-
+import store from '@/store';
+import {createRouter, createWebHistory} from 'vue-router'
+import routes from './routes'
+ 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
-});
+    history: createWebHistory(), 
+    routes
+})
 
-router.beforeEach((to, from, next) => {
-  let userInfo = localStorage.getItem('user');
-  if (to.path === "/login") {
-    next();
-  } else {
-    if (userInfo) {
-      next();
-    } else {
-      next({
-        path: '/login'
-      });
-    }
-  }
-});
-export default router;
+// router.beforeEach((to, from, next) => {
+//     if (to.path === '/login') {
+//       next();
+//     } else {
+//       let token = localStorage.getItem("token");
+   
+//       if (token === 'null' || token === '' || token!= store.state.userId) {
+//         next('/login');
+//       } else {
+//         next();
+//       }
+//     }
+//   });
+ 
+export default router
